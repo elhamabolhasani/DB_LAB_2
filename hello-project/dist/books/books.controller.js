@@ -16,6 +16,8 @@ exports.BooksController = void 0;
 const common_1 = require("@nestjs/common");
 const books_service_1 = require("./books.service");
 const create_book_dto_1 = require("./dto/create-book.dto");
+const bookId_dto_1 = require("./dto/bookId.dto");
+const bookWithId_dto_1 = require("./dto/bookWithId.dto");
 let BooksController = class BooksController {
     constructor(bookServices) {
         this.bookServices = bookServices;
@@ -23,8 +25,14 @@ let BooksController = class BooksController {
     postBooks(books) {
         return this.bookServices.insert(books);
     }
+    deleteBooks(books) {
+        return this.bookServices.delete_b(books);
+    }
     getAll() {
         return this.bookServices.getAllBooks();
+    }
+    putBooks(books) {
+        return this.bookServices.put_b(books);
     }
 };
 __decorate([
@@ -35,11 +43,25 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], BooksController.prototype, "postBooks", null);
 __decorate([
+    common_1.Delete('delete'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [bookId_dto_1.default]),
+    __metadata("design:returntype", void 0)
+], BooksController.prototype, "deleteBooks", null);
+__decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], BooksController.prototype, "getAll", null);
+__decorate([
+    common_1.Put('put'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [bookWithId_dto_1.default]),
+    __metadata("design:returntype", void 0)
+], BooksController.prototype, "putBooks", null);
 BooksController = __decorate([
     common_1.Controller('books'),
     __metadata("design:paramtypes", [books_service_1.BooksService])

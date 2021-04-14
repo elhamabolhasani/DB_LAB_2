@@ -3751,14 +3751,24 @@
         "signature": "878a9a71b84d6cd95603563a9771f1c637b4fd0ba01b1ce03e59704db9021c01",
         "affectsGlobalScope": false
       },
+      "../src/books/dto/bookid.dto.ts": {
+        "version": "475c2295f6174a6c0b4033e1ccdc25575b712e71215aad6daabdf0c312ec09e2",
+        "signature": "24dcf7859fa755069dd9e6d213cc8ecaf57e245041739ea970b5b2e528cb3716",
+        "affectsGlobalScope": false
+      },
+      "../src/books/dto/bookwithid.dto.ts": {
+        "version": "e3a135feb1697eb1196cd37219468d4382acece53dccc68591567d4532cca30d",
+        "signature": "f60d38bd74eacd8d618cb079bf497fbeb0e1a136f0674313f0ff494e9d1af519",
+        "affectsGlobalScope": false
+      },
       "../src/books/books.service.ts": {
-        "version": "d3373da788e4ccc86b8e4e78d1603e9c7bca2b10c60c55f190ba5de99ca1562a",
-        "signature": "4aaf1cc7073f532a8e987dc2ddcb86b8a674fe7b1a5fb9e658b94a5e0f8be972",
+        "version": "904ab94ab57e592b802079d783f019e0bc826f4d6f14dbb5c6a333dc0376a64b",
+        "signature": "aaaa7ea607d5e7fcdd8824c3c3db61174d0ef0da9ce49c26cf1e4156cadafa72",
         "affectsGlobalScope": false
       },
       "../src/books/books.controller.ts": {
-        "version": "ac2300bc40906adda97859964a192612925790892edaf6be239dd80fbafffa0c",
-        "signature": "60f21bc90af97ce610709903a10fc50749d3f5a074565e3a250b352ff832c4ee",
+        "version": "41c8702297991c11b842e498a6d36a63c30ad7278a1371b4fa7dce2099734c49",
+        "signature": "76794105d1fbbbfada93d9a78b8ab712a1b5582b919f10e7ecc51db888c504f5",
         "affectsGlobalScope": false
       },
       "../src/books/books.module.ts": {
@@ -7616,6 +7626,8 @@
       "../src/books/books.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/books/books.service.ts",
+        "../src/books/dto/bookid.dto.ts",
+        "../src/books/dto/bookwithid.dto.ts",
         "../src/books/dto/create-book.dto.ts"
       ],
       "../src/books/books.module.ts": [
@@ -7625,6 +7637,8 @@
       ],
       "../src/books/books.service.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/books/dto/bookid.dto.ts",
+        "../src/books/dto/bookwithid.dto.ts",
         "../src/books/dto/create-book.dto.ts",
         "../src/db/entity/book.entity.ts",
         "../src/db/entity/genre.entity.ts",
@@ -10830,10 +10844,12 @@
       ],
       "../src/books/books.controller.ts": [
         "../src/books/books.service.ts",
+        "../src/books/dto/bookid.dto.ts",
         "../src/books/dto/create-book.dto.ts",
         "../src/db/entity/book.entity.ts"
       ],
       "../src/books/books.service.ts": [
+        "../src/books/dto/bookid.dto.ts",
         "../src/books/dto/create-book.dto.ts",
         "../src/db/entity/book.entity.ts"
       ],
@@ -11749,6 +11765,8 @@
       "../src/books/books.controller.ts",
       "../src/books/books.module.ts",
       "../src/books/books.service.ts",
+      "../src/books/dto/bookid.dto.ts",
+      "../src/books/dto/bookwithid.dto.ts",
       "../src/books/dto/create-book.dto.ts",
       "../src/books/dto/create-genre.dto.ts",
       "../src/books/dto/create-user.dto.ts",
