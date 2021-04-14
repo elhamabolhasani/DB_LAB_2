@@ -3776,6 +3776,21 @@
         "signature": "827e8ecdc7854dc685d7ea2b7672a57d60e3b43f8437d9cab902a2c5a11b457c",
         "affectsGlobalScope": false
       },
+      "../src/jobseekers/jobseekers.service.ts": {
+        "version": "96f43756d84b05fd55c08612edf54e496ffc2907850cf122bd61247908f31149",
+        "signature": "c87ba70c16c354a4b56198fa4dec53c208f15186f07a456a669bd483efaed96b",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/jobseekers.controller.ts": {
+        "version": "7d1b9c92bcf48e0089eaa295a25ef3363255c1cb1d4e81a8f94bec0b998e404b",
+        "signature": "82d611801ef14e21bf742743b699e1067873a19dcae038ec274f5c1aa7e1a139",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/jobseekers.module.ts": {
+        "version": "5534beeed258c39104eaf94ca396f2731307dc7c09092a83bce6ebf082a53c03",
+        "signature": "b6c429669b4c16388920abe6f22f3e4a15e6f02e853164b97917c10d0026b1e8",
+        "affectsGlobalScope": false
+      },
       "../src/genre/dto/create-genre.dto.ts": {
         "version": "c43fb299f60a8c369c4be075609248879740374cf1de685c4c7f8107445c7aef",
         "signature": "0004d51c51d9c8f4aafa8b1535cbe4a1f4ef0baea0e0c490abc8e17d35ffe557",
@@ -3797,7 +3812,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "2512c4e740a4d2eaecd7f97668e26d7964e5a7b220f5caefc3e1efb8fa77bf33",
+        "version": "c2aee73050bc87ff8cd142d322817cd2a02ca95b36149378d9909b0e7e43263e",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -4011,14 +4026,49 @@
         "signature": "250f2ae40e66c46392485525f2de0f8603d7b6793a1d2ed645ce0a64a9b8c6aa",
         "affectsGlobalScope": false
       },
+      "../src/db/entity/users.entity.ts": {
+        "version": "8c73fea463ade095ae10e6e5e3ec640ca38069bf309146169e107c0a7439cbe8",
+        "signature": "cc9960e0bdf2f8559823060cf084177c6e672c2cfbbc1b1ae90084dd2dab2db9",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/request.entity.ts": {
+        "version": "8eed89636b3abc46da013d1a6b4096e80d5c88d6a2f2f2d466ff00e502cfdc11",
+        "signature": "9fef1e2f7b0760d38f2b743ad5bdacc58a874ea2a9644cf4ba4b65c6553f7e67",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/project.entity.ts": {
+        "version": "c2229517ecada0109c82c19cd235f07f92ae7ce964d3f897a49ce83497d7b46f",
+        "signature": "c0301263a7c73bb2b6622650a3db2828d1d3201070717b29a93c64eefc03cca2",
+        "affectsGlobalScope": false
+      },
       "../src/genre/dto/create-book.dto.ts": {
         "version": "412158367ba5f214a530cac6433ce5128ebccf0e819f85ad80f3168eec82ac36",
         "signature": "878a9a71b84d6cd95603563a9771f1c637b4fd0ba01b1ce03e59704db9021c01",
         "affectsGlobalScope": false
       },
+      "../src/genre/dto/create-request.dto.ts": {
+        "version": "88cea57b51acea485e10f55c2e948ab1103b3873f319cb8b0884b38191ab72d6",
+        "signature": "d049811377a2ca75ffde3630bca21ef1d6679681ab4c929447e29672c5cc0118",
+        "affectsGlobalScope": false
+      },
       "../src/genre/dto/create-user.dto.ts": {
         "version": "fefd7e51432048ee2f5f4e99b659473df6991f3dea39cc3160a4b4f939d99043",
         "signature": "4d930cde8c27d415a1505c60f30a0074295a136b9d189de836fae82316c60fe0",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-project.dto.ts": {
+        "version": "a5b1b65aa195c21ce3df555d92c60b273af0cc594fe5b969174f82c8dd764c21",
+        "signature": "7c59848a2ab8282be2f81b4b8e61aaf3b300e5109c4dff17b02b2e572339ea4e",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-request.dto.ts": {
+        "version": "88cea57b51acea485e10f55c2e948ab1103b3873f319cb8b0884b38191ab72d6",
+        "signature": "d049811377a2ca75ffde3630bca21ef1d6679681ab4c929447e29672c5cc0118",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-users.dto.ts": {
+        "version": "55462035587d5b0a350392d780796b36e6aa13b7ed0ffd56d6a80f600bee586a",
+        "signature": "b6bd4dcec50477e051d5d033dba716263ac6ad1f5fe137c1fd29fe0a52960256",
         "affectsGlobalScope": false
       },
       "../src/user/dto/create-book.dto.ts": {
@@ -7618,6 +7668,7 @@
         "../src/db/entity/user.entity.ts",
         "../src/genre/genre.module.ts",
         "../src/hello/hello.module.ts",
+        "../src/jobseekers/jobseekers.module.ts",
         "../src/user/user.module.ts"
       ],
       "../src/app.service.ts": [
@@ -7657,9 +7708,25 @@
       "../src/db/entity/genre.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
+      "../src/db/entity/project.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/genre.entity.ts",
+        "../src/db/entity/request.entity.ts",
+        "../src/db/entity/user.entity.ts"
+      ],
+      "../src/db/entity/request.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/book.entity.ts",
+        "../src/db/entity/project.entity.ts",
+        "../src/db/entity/users.entity.ts"
+      ],
       "../src/db/entity/user.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/db/entity/book.entity.ts"
+      ],
+      "../src/db/entity/users.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/request.entity.ts"
       ],
       "../src/db/genre.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
@@ -7701,6 +7768,17 @@
       "../src/hello/hello.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/hello/dto/person.dto.ts"
+      ],
+      "../src/jobseekers/jobseekers.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/jobseekers/jobseekers.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/jobseekers/jobseekers.controller.ts",
+        "../src/jobseekers/jobseekers.service.ts"
+      ],
+      "../src/jobseekers/jobseekers.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
@@ -10845,11 +10923,13 @@
       "../src/books/books.controller.ts": [
         "../src/books/books.service.ts",
         "../src/books/dto/bookid.dto.ts",
+        "../src/books/dto/bookwithid.dto.ts",
         "../src/books/dto/create-book.dto.ts",
         "../src/db/entity/book.entity.ts"
       ],
       "../src/books/books.service.ts": [
         "../src/books/dto/bookid.dto.ts",
+        "../src/books/dto/bookwithid.dto.ts",
         "../src/books/dto/create-book.dto.ts",
         "../src/db/entity/book.entity.ts"
       ],
@@ -10859,11 +10939,29 @@
         "../src/db/user.entity.ts"
       ],
       "../src/db/entity/book.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
         "../src/db/entity/genre.entity.ts",
         "../src/db/entity/user.entity.ts"
       ],
+      "../src/db/entity/genre.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/db/entity/project.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/request.entity.ts"
+      ],
+      "../src/db/entity/request.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/project.entity.ts",
+        "../src/db/entity/users.entity.ts"
+      ],
       "../src/db/entity/user.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
         "../src/db/entity/book.entity.ts"
+      ],
+      "../src/db/entity/users.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/request.entity.ts"
       ],
       "../src/db/genre.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
@@ -10874,10 +10972,12 @@
       ],
       "../src/genre/genre.controller.ts": [
         "../src/db/entity/genre.entity.ts",
+        "../src/genre/dto/create-genre.dto.ts",
         "../src/genre/genre.service.ts"
       ],
       "../src/genre/genre.service.ts": [
-        "../src/db/entity/genre.entity.ts"
+        "../src/db/entity/genre.entity.ts",
+        "../src/genre/dto/create-genre.dto.ts"
       ],
       "../src/hello/hello.controller.ts": [
         "../src/hello/dto/person.dto.ts",
@@ -11773,11 +11873,15 @@
       "../src/db/book.entity.ts",
       "../src/db/entity/book.entity.ts",
       "../src/db/entity/genre.entity.ts",
+      "../src/db/entity/project.entity.ts",
+      "../src/db/entity/request.entity.ts",
       "../src/db/entity/user.entity.ts",
+      "../src/db/entity/users.entity.ts",
       "../src/db/genre.entity.ts",
       "../src/db/user.entity.ts",
       "../src/genre/dto/create-book.dto.ts",
       "../src/genre/dto/create-genre.dto.ts",
+      "../src/genre/dto/create-request.dto.ts",
       "../src/genre/dto/create-user.dto.ts",
       "../src/genre/genre.controller.ts",
       "../src/genre/genre.module.ts",
@@ -11786,6 +11890,12 @@
       "../src/hello/hello.controller.ts",
       "../src/hello/hello.module.ts",
       "../src/hello/hello.service.ts",
+      "../src/jobseekers/dto/create-project.dto.ts",
+      "../src/jobseekers/dto/create-request.dto.ts",
+      "../src/jobseekers/dto/create-users.dto.ts",
+      "../src/jobseekers/jobseekers.controller.ts",
+      "../src/jobseekers/jobseekers.module.ts",
+      "../src/jobseekers/jobseekers.service.ts",
       "../src/main.ts",
       "../src/user/dto/create-book.dto.ts",
       "../src/user/dto/create-genre.dto.ts",

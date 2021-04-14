@@ -1,1 +1,1 @@
-{"version":3,"file":"bookId.dto.js","sourceRoot":"","sources":["../../../src/books/dto/bookId.dto.ts"],"names":[],"mappings":";;AAAA,MAAqB,MAAM;CAE1B;AAFD,yBAEC"}
+{"version":3,"file":"bookId.dto.js","sourceRoot":"","sources":["../../../src/Books/dto/bookId.dto.ts"],"names":[],"mappings":";;AAAA,MAAqB,MAAM;CAE1B;AAFD,yBAEC"}

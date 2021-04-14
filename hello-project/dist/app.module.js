@@ -15,6 +15,7 @@ const hello_module_1 = require("./hello/hello.module");
 const typeorm_1 = require("@nestjs/typeorm");
 const user_entity_1 = require("./db/entity/user.entity");
 const books_module_1 = require("./Books/books.module");
+const jobseekers_module_1 = require("./jobseekers/jobseekers.module");
 const genre_module_1 = require("./Genre/genre.module");
 const book_entity_1 = require("./db/entity/book.entity");
 const genre_entity_1 = require("./db/entity/genre.entity");
@@ -28,6 +29,7 @@ AppModule = __decorate([
             genre_module_1.default,
             typeorm_1.TypeOrmModule.forFeature([user_entity_1.default, book_entity_1.default, genre_entity_1.default]),
             typeorm_1.TypeOrmModule.forRoot(),
+            jobseekers_module_1.JobseekersModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

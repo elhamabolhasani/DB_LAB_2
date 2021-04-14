@@ -1,1 +1,1 @@
-{"version":3,"file":"create-genre.dto.js","sourceRoot":"","sources":["../../../src/genre/dto/create-genre.dto.ts"],"names":[],"mappings":";;AAAA,MAAqB,cAAc;CAElC;AAFD,iCAEC"}
+{"version":3,"file":"create-genre.dto.js","sourceRoot":"","sources":["../../../src/Genre/dto/create-genre.dto.ts"],"names":[],"mappings":";;AAAA,MAAqB,cAAc;CAElC;AAFD,iCAEC"}
