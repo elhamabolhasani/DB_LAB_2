@@ -3832,7 +3832,7 @@
         "affectsGlobalScope": false
       },
       "../src/jobseekers/jobseekers.controller.ts": {
-        "version": "9a6264a9ab1af8e90d42ce63e7421429b4863d86c478a539eacbe615fcb13626",
+        "version": "9eea72037441a89ae297147056e246c768a1210bdc87b04dfe0c2bec0e27a23b",
         "signature": "27f417b3542564e7d0753535c34d6fbfd6a186625a06d61204ba618165e93d9b",
         "affectsGlobalScope": false
       },

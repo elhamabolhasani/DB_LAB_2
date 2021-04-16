@@ -62,74 +62,74 @@ let JobseekersController = class JobseekersController {
     }
 };
 __decorate([
-    common_2.Post('User/post'),
+    common_2.Post('User'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_users_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "postUsers", null);
 __decorate([
-    common_2.Post('Project/post'),
+    common_2.Post('Project'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_project_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "postProjects", null);
 __decorate([
-    common_2.Post('Request/post'),
+    common_2.Post('Request'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_request_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "postRequests", null);
 __decorate([
-    common_2.Get('User/get'),
+    common_2.Get('User'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "getAllUser", null);
 __decorate([
-    common_2.Get('Request/get'),
+    common_2.Get('Request'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "getAllRequests", null);
 __decorate([
-    common_2.Get('Project/get'),
+    common_2.Get('Project'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "getAllProject", null);
 __decorate([
-    common_2.Post('User/Projects/get'),
+    common_2.Post('User/Projects'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [UserId_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "getUserProjects", null);
 __decorate([
-    common_2.Post('/Project/Request/get'),
+    common_2.Post('/Project/Requests'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [ProjectIdDel_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "getProjectRequests", null);
 __decorate([
-    common_2.Put('Request/put'),
+    common_2.Put('Request'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [request_id_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "putRequests", null);
 __decorate([
-    common_2.Put('Project/put'),
+    common_2.Put('Project'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [ProjectId_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], JobseekersController.prototype, "putProjects", null);
 __decorate([
-    common_2.Delete('project/delete'),
+    common_2.Delete('project'),
     __param(0, common_2.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [ProjectIdDel_dto_1.default]),
