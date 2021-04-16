@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
+const users_entity_1 = require("./users.entity");
 const request_entity_1 = require("./request.entity");
 let ProjectEntity = class ProjectEntity extends typeorm_1.BaseEntity {
 };
@@ -18,9 +19,9 @@ __decorate([
     __metadata("design:type", Number)
 ], ProjectEntity.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", Number)
-], ProjectEntity.prototype, "ownerId", void 0);
+    typeorm_1.ManyToOne(type => users_entity_1.default, user => user.projects),
+    __metadata("design:type", users_entity_1.default)
+], ProjectEntity.prototype, "user", void 0);
 __decorate([
     typeorm_1.Column({ length: 500 }),
     __metadata("design:type", String)

@@ -1,6 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany } from 'typeorm';
-import UserEntity from './user.entity';
-import GenreEntity from './genre.entity';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany, ManyToOne } from 'typeorm';
+import UsersEntity from './users.entity';
 import RequestEntity from './request.entity';
 
 @Entity()
@@ -9,8 +8,8 @@ export default class ProjectEntity extends BaseEntity
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  ownerId: number;
+  @ManyToOne(type => UsersEntity, user => user.projects)
+  user: UsersEntity;
   
   @Column({ length: 500 })
   name: string;
