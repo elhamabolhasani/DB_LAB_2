@@ -19,6 +19,9 @@ const jobseekers_module_1 = require("./jobseekers/jobseekers.module");
 const genre_module_1 = require("./Genre/genre.module");
 const book_entity_1 = require("./db/entity/book.entity");
 const genre_entity_1 = require("./db/entity/genre.entity");
+const request_entity_1 = require("./db/entity/request.entity");
+const project_entity_1 = require("./db/entity/project.entity");
+const users_entity_1 = require("./db/entity/users.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -27,7 +30,8 @@ AppModule = __decorate([
             user_module_1.UserModule,
             books_module_1.BooksModule,
             genre_module_1.default,
-            typeorm_1.TypeOrmModule.forFeature([user_entity_1.default, book_entity_1.default, genre_entity_1.default]),
+            jobseekers_module_1.JobseekersModule,
+            typeorm_1.TypeOrmModule.forFeature([user_entity_1.default, book_entity_1.default, genre_entity_1.default, request_entity_1.default, users_entity_1.default, project_entity_1.default]),
             typeorm_1.TypeOrmModule.forRoot(),
             jobseekers_module_1.JobseekersModule,
         ],

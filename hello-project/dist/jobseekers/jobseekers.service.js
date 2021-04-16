@@ -27,7 +27,8 @@ let JobseekersService = class JobseekersService {
         const user = await users_entity_1.default.findOne({ where: { id: userID }, relations: ['requests'] });
         return user.requests;
     }
-    async getProjectOfUser(userID) {
+    async getProjectOfUser(userDetails) {
+        const { userID } = userDetails;
         console.log(typeof (userID));
         const user = await users_entity_1.default.findOne({ where: { id: userID }, relations: ['projects'] });
         return user.projects;
@@ -53,6 +54,9 @@ let JobseekersService = class JobseekersService {
         await request.save();
         return request;
     }
+    async getAllRequests() {
+        return await request_entity_1.default.find();
+    }
     async insert_project(projectDetails) {
         const projectEntity = project_entity_1.default.create();
         const { user, name, priority, deedline_days, price } = projectDetails;
@@ -64,10 +68,38 @@ let JobseekersService = class JobseekersService {
         await project_entity_1.default.save(projectEntity);
         return projectEntity;
     }
-    async getRequestOfProject(projectID) {
-        console.log(typeof (projectID));
-        const project = await project_entity_1.default.findOne({ where: { id: projectID }, relations: ['requests'] });
+    async put_project(projectDetails) {
+        const { user, name, priority, deedline_days, price, projectId } = projectDetails;
+        console.log(typeof (projectId));
+        const project = await project_entity_1.default.findOne(projectId);
+        if (!project) {
+            throw new Error(`The project with id: ${projectId} does not exist!`);
+        }
+        project.name = name;
+        project.priority = priority;
+        project.deedline_days = deedline_days;
+        project.price = price;
+        project.user = await users_entity_1.default.findOne(user);
+        await project.save();
+        return project;
+    }
+    async delete_project(projectDetails) {
+        const { projectId } = projectDetails;
+        const project = await project_entity_1.default.findOne(projectId);
+        if (!project) {
+            throw new Error(`The project with id: ${projectId} does not exist!`);
+        }
+        await project.remove();
+        return project;
+    }
+    async getRequestOfProject(projectDetails) {
+        const { projectId } = projectDetails;
+        console.log(typeof (projectId));
+        const project = await project_entity_1.default.findOne({ where: { id: projectId }, relations: ['requests'] });
         return project.requests;
+    }
+    async getAllProjects() {
+        return await project_entity_1.default.find();
     }
 };
 JobseekersService = __decorate([

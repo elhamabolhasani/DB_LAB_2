@@ -6,6 +6,11 @@ import CreateUsersDto from './dto/create-users.dto';
 import CreateProjectDto from './dto/create-project.dto';
 import CreateRequestDto from './dto/create-request.dto';
 import RequestIdDto from './dto/request-id.dto';
+import UserId from './dto/UserId.dto';
+import ProjectIdDto from './dto/ProjectId.dto';
+import ProjectId from './dto/ProjectIdDel.dto';
+
+
 
 @Injectable()
 export class JobseekersService {
@@ -25,7 +30,8 @@ export class JobseekersService {
     const user: UsersEntity = await UsersEntity.findOne({where: {id: userID}, relations: ['requests']});
     return user.requests;
   }
-  async getProjectOfUser(userID: number): Promise<ProjectEntity[]> {
+  async getProjectOfUser(userDetails: UserId): Promise<ProjectEntity[]> {
+	const { userID } = userDetails;
     console.log(typeof(userID));
     const user: UsersEntity = await UsersEntity.findOne({where: {id: userID}, relations: ['projects']});
     return user.projects;
@@ -54,6 +60,9 @@ export class JobseekersService {
     await request.save();
     return request;
   }
+  async getAllRequests(): Promise<RequestEntity[]> {
+    return await RequestEntity.find();
+  }
   
   // project part
   async insert_project(projectDetails: CreateProjectDto): Promise<ProjectEntity> {
@@ -68,10 +77,40 @@ export class JobseekersService {
     await ProjectEntity.save(projectEntity);
     return projectEntity;
    }
-   async getRequestOfProject(projectID: number): Promise<RequestEntity[]> {
-    console.log(typeof(projectID));
-    const project: ProjectEntity = await ProjectEntity.findOne({where: {id: projectID}, relations: ['requests']});
+   async put_project(projectDetails: ProjectIdDto): Promise<ProjectEntity> {
+    const { user, name, priority, deedline_days, price, projectId} = projectDetails;
+	console.log(typeof(projectId));
+	const project = await ProjectEntity.findOne(projectId);
+	  if (!project) {
+		throw new Error(`The project with id: ${projectId} does not exist!`);
+	  }	  
+    project.name = name;
+	project.priority = priority;
+	project.deedline_days = deedline_days;
+	project.price = price;
+	project.user = await UsersEntity.findOne(user) ;
+	
+    await project.save();
+    return project;
+  }
+  async delete_project(projectDetails: ProjectId): Promise<ProjectEntity> {
+	  const { projectId } = projectDetails;
+      const project = await ProjectEntity.findOne(projectId);
+	  if (!project) {
+		throw new Error(`The project with id: ${projectId} does not exist!`);
+	  }
+
+	  await project.remove();
+	  return project;
+  }
+   async getRequestOfProject(projectDetails : ProjectId): Promise<RequestEntity[]> {
+	const { projectId } = projectDetails;
+    console.log(typeof(projectId));
+    const project: ProjectEntity = await ProjectEntity.findOne({where: {id: projectId}, relations: ['requests']});
     return project.requests;
+  }
+  async getAllProjects(): Promise<ProjectEntity[]> {
+    return await ProjectEntity.find();
   }
   
   
